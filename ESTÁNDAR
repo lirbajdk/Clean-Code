@@ -37,3 +37,52 @@
 /***************************************************************************************************
  *  FUNCIONES
  ***************************************************************************************************/
+
+
+# DOXYGEN PARA FUNCIONES
+
+/**
+ * @brief Calcula la media móvil simple.
+ *
+ * @param nuevo_valor  Nueva lectura de ADC.
+ * @return uint16_t    Valor filtrado.
+ */
+uint16_t funcion(uint16_t nuevo_valor)
+{
+    // código
+}
+
+## Para parámetros más complejos:
+
+/**
+ * @brief Inicializa el sensor MPU6050.
+ *
+ * @param config  Puntero a estructura con configuraciones.
+ * @return int     0 si OK, negativo si error.
+ */
+int mpu_init(mpu_config_t *config);
+
+
+# COMENTARIOS DE LÍNEA (solo si aportan algo)
+  Evitar cosas obvias:
+
+NO:    i++; // incrementar i
+SI:    i++; // avanzar al siguiente índice del buffer circular
+
+
+# COMENTARIOS DE BLOQUE PARA ALGORITMOS
+
+/* 
+ * Filtro de mediana:
+ * 1. Ordena los últimos 3 valores
+ * 2. Devuelve el valor del medio
+ */
+
+# REGIONES OPCIONALES (si tu IDE soporta)
+
+#pragma region TIMERS
+...
+#pragma endregion
+
+
+
